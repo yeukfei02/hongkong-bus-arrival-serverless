@@ -83,7 +83,7 @@ functions:
       #     cors: true
       - schedule: rate(10 minutes)
     timeout: 900
-    memorySize: 5000
+    memorySize: 2000
 
   kwbBusStopListScheduleJob:
     handler: src/kmb/busStopListScheduleJob/handler.busStopListScheduleJob
@@ -94,7 +94,7 @@ functions:
       #     cors: true
       - schedule: rate(10 minutes)
     timeout: 900
-    memorySize: 5000
+    memorySize: 2000
 
   kwbBusRouteList:
     handler: src/kmb/busRouteList/handler.busRouteList
