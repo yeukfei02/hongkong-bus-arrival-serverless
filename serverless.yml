@@ -1,0 +1,134 @@
+org: yeukfei05
+app: hongkong-bus-arrival-serverless
+service: hongkong-bus-arrival-serverless
+
+frameworkVersion: '2'
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: prod
+  region: ap-southeast-1
+  apiName: hongkong-bus-arrival-serverless-prod
+  tracing:
+    apiGateway: true
+    lambda: true
+  environment:
+    NODE_ENV: production
+    MY_AWS_ACCESS_KEY: ${param:MY_AWS_ACCESS_KEY}
+    MY_AWS_SECRET_ACCESS_KEY: ${param:MY_AWS_SECRET_ACCESS_KEY}
+  iam:
+    role:
+      statements:
+        - Effect: 'Allow'
+          Action:
+            - 'xray:PutTraceSegments'
+            - 'xray:PutTelemetryRecords'
+          Resource:
+            - '*'
+  apiGateway:
+    shouldStartNameWithService: true
+    description: hongkong bus arrival serverless prod
+  lambdaHashingVersion: 20201221
+
+functions:
+  nwfbOrCtbCompany:
+    handler: src/nwfbOrCtb/company/handler.company
+    events:
+      - http:
+          path: /company
+          method: get
+          cors: true
+  
+  nwfbOrCtbBusRoute:
+    handler: src/nwfbOrCtb/busRoute/handler.busRoute
+    events:
+      - http:
+          path: /bus-route
+          method: get
+          cors: true
+
+  nwfbOrCtbBusRouteStop:
+    handler: src/nwfbOrCtb/busRouteStop/handler.busRouteStop
+    events:
+      - http:
+          path: /bus-route-stop
+          method: get
+          cors: true
+
+  nwfbOrCtbBusStop:
+    handler: src/nwfbOrCtb/busStop/handler.busStop
+    events:
+      - http:
+          path: /bus-stop/{busStopId}
+          method: get
+          cors: true
+
+  nwfbOrCtbBusArrivalTime:
+    handler: src/nwfbOrCtb/busArrivalTime/handler.busArrivalTime
+    events:
+      - http:
+          path: /bus-arrival-time
+          method: get
+          cors: true
+
+  kwbBusRouteList:
+    handler: src/kmb/busRouteList/handler.busRouteList
+    events:
+      - http:
+          path: /kmb/bus-route-list
+          method: get
+          cors: true
+
+  kwbBusStopList:
+    handler: src/kmb/busStopList/handler.busStopList
+    events:
+      - http:
+          path: /kmb/bus-stop-list
+          method: get
+          cors: true
+
+  kwbBusRoute:
+    handler: src/kmb/busRoute/handler.busRoute
+    events:
+      - http:
+          path: /kmb/bus-route
+          method: get
+          cors: true
+
+  kwbBusRouteStop:
+    handler: src/kmb/busRouteStop/handler.busRouteStop
+    events:
+      - http:
+          path: /kmb/bus-route-stop
+          method: get
+          cors: true
+
+  kwbBusArrivalTime:
+    handler: src/kmb/busArrivalTime/handler.busArrivalTime
+    events:
+      - http:
+          path: /kmb/bus-arrival-time
+          method: get
+          cors: true
+
+  kwbBusStopArrivalTime:
+    handler: src/kmb/busStopArrivalTime/handler.busStopArrivalTime
+    events:
+      - http:
+          path: /kmb/bus-stop-arrival-time
+          method: get
+          cors: true
+
+  kwbBusRouteArrivalTime:
+    handler: src/kmb/busRouteArrivalTime/handler.busRouteArrivalTime
+    events:
+      - http:
+          path: /kmb/bus-route-arrival-time
+          method: get
+          cors: true
+
+plugins:
+  - serverless-offline
+
