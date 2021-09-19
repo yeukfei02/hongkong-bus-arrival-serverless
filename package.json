@@ -1,0 +1,44 @@
+{
+  "name": "hongkong-bus-arrival-serverless",
+  "version": "0.1.0",
+  "main": "app.js",
+  "repository": "https://github.com/yeukfei02/hongkong-bus-arrival-serverless.git",
+  "author": "Donald Wu <yeukfei02@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dynamoose": "^2.8.1",
+    "lodash": "^4.17.21",
+    "nanoid": "^3.1.25",
+    "node-fetch": "2.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "git-cz": "^4.7.6",
+    "husky": "^7.0.2",
+    "jest": "^27.2.0",
+    "prettier": "^2.4.1",
+    "serverless": "^2.59.0",
+    "serverless-offline": "^8.2.0",
+    "standard-version": "^9.3.1"
+  },
+  "scripts": {
+    "dev": "serverless offline start",
+    "deploy": "serverless deploy",
+    "package": "serverless package",
+    "dashboard": "serverless dashboard",
+    "remove": "serverless remove",
+    "lint": "eslint . --quiet --fix",
+    "test": "jest --detectOpenHandles",
+    "commit": "git-cz",
+    "release": "standard-version"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint",
+      "pre-push": "yarn lint"
+    }
+  }
+}
