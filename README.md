@@ -10,7 +10,7 @@ Hong Kong Bus Arrival Api
 
 - Long Win Bus Company Limited (LWB)
 
-documentation: <>
+documentation: <https://documenter.getpostman.com/view/3827865/UUxtEAPV>
 
 api url: <>
 
