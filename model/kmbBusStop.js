@@ -10,7 +10,13 @@ const kmbBusStopSchema = new dynamoose.Schema(
   {
     id: String,
     stop: String,
-    name_en: String,
+    name_en: {
+      type: String,
+      index: {
+        name: "nameEnIndex",
+        global: true,
+      },
+    },
     name_tc: String,
     name_sc: String,
     lat: Number,

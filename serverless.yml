@@ -31,6 +31,7 @@ provider:
     shouldStartNameWithService: true
     description: hongkong bus arrival serverless prod
   lambdaHashingVersion: 20201221
+  timeout: 30
 
 functions:
   nwfbOrCtbCompany:
@@ -72,6 +73,28 @@ functions:
           path: /bus-arrival-time
           method: get
           cors: true
+
+  kwbBusRouteListScheduleJob:
+    handler: src/kmb/busRouteListScheduleJob/handler.busRouteListScheduleJob
+    events:
+      # - http:
+      #     path: /kmb/bus-route-list-schedule-job
+      #     method: get
+      #     cors: true
+      - schedule: rate(5 minutes)
+    timeout: 900
+    memorySize: 10000
+
+  kwbBusStopListScheduleJob:
+    handler: src/kmb/busStopListScheduleJob/handler.busStopListScheduleJob
+    events:
+      # - http:
+      #     path: /kmb/bus-stop-list-schedule-job
+      #     method: get
+      #     cors: true
+      - schedule: rate(5 minutes)
+    timeout: 900
+    memorySize: 10000
 
   kwbBusRouteList:
     handler: src/kmb/busRouteList/handler.busRouteList

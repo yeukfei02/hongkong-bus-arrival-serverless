@@ -9,10 +9,16 @@ dynamoose.aws.sdk.config.update({
 const kmbBusRouteSchema = new dynamoose.Schema(
   {
     id: String,
-    route: Number,
-    bound: Number,
+    route: String,
+    bound: String,
     service_type: Number,
-    orig_en: String,
+    orig_en: {
+      type: String,
+      index: {
+        name: "origEnIndex",
+        global: true,
+      },
+    },
     orig_tc: String,
     orig_sc: String,
     dest_en: String,
