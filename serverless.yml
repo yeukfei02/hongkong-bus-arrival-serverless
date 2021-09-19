@@ -81,7 +81,7 @@ functions:
       #     path: /kmb/bus-route-list-schedule-job
       #     method: get
       #     cors: true
-      - schedule: rate(1 month)
+      - schedule: rate(30 days)
     timeout: 900
     memorySize: 3000
 
@@ -92,7 +92,7 @@ functions:
       #     path: /kmb/bus-stop-list-schedule-job
       #     method: get
       #     cors: true
-      - schedule: rate(1 month)
+      - schedule: rate(30 days)
     timeout: 900
     memorySize: 3000
 
