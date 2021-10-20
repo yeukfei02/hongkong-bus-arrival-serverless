@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.1...v0.1.2) (2021-10-20)
+
+
+### Bug Fixes
+
+* 🐛 fix schedule job crontab ([60151cd](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/60151cdeb2726ff30fa6777b36fd3d038aca46fd))
+* 🐛 fix wrong rate ([c74ac88](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/c74ac881420799f3d9cc52db003a90d29cd1ea1a))
+* 🐛 update sls version ([bedf3e4](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/bedf3e4ce7b0d8d138bb8abb8d10f32ac138cb3f))
+
 ### 0.1.1 (2021-09-19)
 
 
