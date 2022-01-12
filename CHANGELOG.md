@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.2...v0.1.3) (2022-01-12)
+
+
+### Features
+
+* 🎸 use arm64 architecture ([e14aaa9](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/e14aaa9335eb1ddaae34fdc4d09327b4d2904884))
+
+
+### Bug Fixes
+
+* 🐛 update sls and sls offline lib ([dcc5530](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/dcc553028fad04efe700685228b621968c806480))
+
 ### [0.1.2](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.1...v0.1.2) (2021-10-20)
 
 
