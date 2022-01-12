@@ -31,6 +31,7 @@ provider:
     shouldStartNameWithService: true
     description: hongkong bus arrival serverless prod
   lambdaHashingVersion: 20201221
+  architecture: arm64
   timeout: 30
 
 functions:
