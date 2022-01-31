@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.3...v0.1.4) (2022-01-31)
+
+
+### Bug Fixes
+
+* 🐛 update sls lib ([9f97ee4](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/9f97ee486a7f74db73f25fbdbd0f5b0b3c8377ea))
+
 ### [0.1.3](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.2...v0.1.3) (2022-01-12)
 
 
