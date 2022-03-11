@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.4...v0.1.5) (2022-03-11)
+
+
+### Features
+
+* 🎸 add .env.sample ([2312889](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/231288969d0a1a756ee7a045ba91f89992ec3a63))
+
+
+### Bug Fixes
+
+* 🐛 fix sls.yml ([a1b42bb](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/a1b42bb1a2d96cbbaeee10dcea2ba1b9746e10dd))
+* 🐛 update sls lib ([798d7d1](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/798d7d10d2d4c54d264988721cafc9f6cd5b814d))
+
 ### [0.1.4](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.3...v0.1.4) (2022-01-31)
 
 
