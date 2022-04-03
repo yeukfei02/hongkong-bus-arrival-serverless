@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.5...v0.1.6) (2022-04-03)
+
+
+### Bug Fixes
+
+* 🐛 fix code ([3590bb0](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/3590bb0ffd74c87e105298fef330dc85c9fa9c56))
+
 ### [0.1.5](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.4...v0.1.5) (2022-03-11)
 
 
