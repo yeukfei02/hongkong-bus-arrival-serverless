@@ -2,7 +2,7 @@ org: yeukfei05
 app: hongkong-bus-arrival-serverless
 service: hongkong-bus-arrival-serverless
 
-frameworkVersion: '3'
+frameworkVersion: "3"
 useDotenv: true
 
 provider:
@@ -18,15 +18,6 @@ provider:
     NODE_ENV: production
     MY_AWS_ACCESS_KEY: ${param:MY_AWS_ACCESS_KEY}
     MY_AWS_SECRET_ACCESS_KEY: ${param:MY_AWS_SECRET_ACCESS_KEY}
-  iam:
-    role:
-      statements:
-        - Effect: 'Allow'
-          Action:
-            - 'xray:PutTraceSegments'
-            - 'xray:PutTelemetryRecords'
-          Resource:
-            - '*'
   apiGateway:
     shouldStartNameWithService: true
     description: hongkong bus arrival serverless prod
@@ -42,7 +33,7 @@ functions:
           path: /company
           method: get
           cors: true
-  
+
   nwfbOrCtbBusRoute:
     handler: src/nwfbOrCtb/busRoute/handler.busRoute
     events:
@@ -155,4 +146,3 @@ functions:
 
 plugins:
   - serverless-offline
-

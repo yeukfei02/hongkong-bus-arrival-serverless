@@ -11,5 +11,7 @@ module.exports = {
   rules: {
     "no-plusplus": "off",
     "no-await-in-loop": "off",
+    camelcase: "off",
+    "no-console": "off",
   },
 };

@@ -1,11 +1,12 @@
 const fetch = require("node-fetch");
 
-const ROOT_URL = "https://data.etabus.gov.hk";
+const rootUrl = "https://data.etabus.gov.hk";
+
 module.exports.getBusRouteListKmb = async () => {
   let result = null;
 
   try {
-    const response = await fetch(`${ROOT_URL}/v1/transport/kmb/route`);
+    const response = await fetch(`${rootUrl}/v1/transport/kmb/route`);
     if (response) {
       result = await response.json();
     }

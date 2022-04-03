@@ -1,6 +1,7 @@
 const fetch = require("node-fetch");
 
-const ROOT_URL = "https://rt.data.gov.hk";
+const rootUrl = "https://rt.data.gov.hk";
+
 module.exports.getEstimateTimeArrival = async (
   companyId,
   routeStr,
@@ -10,7 +11,7 @@ module.exports.getEstimateTimeArrival = async (
 
   try {
     const response = await fetch(
-      `${ROOT_URL}/v1/transport/citybus-nwfb/eta/${companyId}/${busStopId}/${routeStr}`
+      `${rootUrl}/v1/transport/citybus-nwfb/eta/${companyId}/${busStopId}/${routeStr}`
     );
     if (response) {
       result = await response.json();
