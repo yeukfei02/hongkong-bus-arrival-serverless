@@ -5,7 +5,9 @@ dynamoose.aws.sdk.config.update({
   secretAccessKey: process.env.MY_AWS_SECRET_ACCESS_KEY,
   region: "ap-southeast-1",
 });
+
 const { nanoid } = require("nanoid");
+
 const { getBusStopListKmb } = require("../../../api/kmb/busStopList");
 
 const KmbBusStop = require("../../../model/kmbBusStop");
@@ -30,7 +32,7 @@ module.exports.busStopListScheduleJob = async () => {
     if (getBusStopListKmbResultList.length !== kmbBusStopList.length) {
       for (let index = 0; index < kmbBusStopList.length; index++) {
         const item = kmbBusStopList[index];
-        const {id} = item;
+        const { id } = item;
         await KmbBusStop.delete({ id });
       }
 
