@@ -1,6 +1,6 @@
 org: yeukfei05
-app: hongkong-bus-arrival-serverless
-service: hongkong-bus-arrival-serverless
+app: hk-bus-arrival-serverless
+service: hk-bus-arrival-serverless
 
 frameworkVersion: "3"
 useDotenv: true
@@ -10,7 +10,7 @@ provider:
   runtime: nodejs14.x
   stage: prod
   region: ap-southeast-1
-  apiName: hongkong-bus-arrival-serverless-prod
+  apiName: hk-bus-arrival-serverless-prod
   tracing:
     apiGateway: true
     lambda: true
@@ -20,7 +20,7 @@ provider:
     MY_AWS_SECRET_ACCESS_KEY: ${param:MY_AWS_SECRET_ACCESS_KEY}
   apiGateway:
     shouldStartNameWithService: true
-    description: hongkong bus arrival serverless prod
+    description: hk bus arrival serverless prod
   architecture: arm64
   timeout: 30
 
@@ -33,11 +33,11 @@ functions:
           method: get
           cors: true
 
-  nwfbOrCtbBusRouteListCronJob:
-    handler: src/nwfbOrCtb/busRouteListCronJob/handler.busRouteListCronJob
+  nwfbOrCtbBusRouteListScheduleJob:
+    handler: src/nwfbOrCtb/busRouteListScheduleJob/handler.busRouteListScheduleJob
     events:
       # - http:
-      #     path: /bus-route-list-cron-job
+      #     path: /bus-route-list-schedule-job
       #     method: get
       #     cors: true
       - schedule: cron(0 1 1 * ? *)
