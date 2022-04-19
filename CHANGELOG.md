@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.6...v0.1.7) (2022-04-19)
+
+
+### Features
+
+* 🎸 add nwfb or ctb bus route list and cron job ([cef06bb](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/cef06bb2dc5e59d8486d4449046b8525cb486f10))
+* 🎸 add sortby route asc ([72c3503](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/72c3503483c4361d157a57b6ffc985a5e8c00a59))
+
+
+### Bug Fixes
+
+* 🐛 update sls version ([bf7d33b](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/bf7d33b636d69af97d49bcb9072f15100f394718))
+
 ### [0.1.6](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.5...v0.1.6) (2022-04-03)
 
 
