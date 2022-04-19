@@ -34,6 +34,25 @@ functions:
           method: get
           cors: true
 
+  nwfbOrCtbBusRouteListScheduleJob:
+    handler: src/nwfbOrCtb/busRouteListScheduleJob/handler.busRouteListScheduleJob
+    events:
+      # - http:
+      #     path: /bus-route-list-schedule-job
+      #     method: get
+      #     cors: true
+      - schedule: cron(0 1 1 * ? *)
+    timeout: 900
+    memorySize: 3000
+
+  nwfbOrCtbBusRouteList:
+    handler: src/nwfbOrCtb/busRouteList/handler.busRouteList
+    events:
+      - http:
+          path: /bus-route-list
+          method: get
+          cors: true
+
   nwfbOrCtbBusRoute:
     handler: src/nwfbOrCtb/busRoute/handler.busRoute
     events:
