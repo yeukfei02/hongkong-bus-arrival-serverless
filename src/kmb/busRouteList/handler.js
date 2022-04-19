@@ -1,3 +1,4 @@
+const _ = require("lodash");
 const KmbBusRoute = require("../../../model/kmbBusRoute");
 const { getBusRouteListKmb } = require("../../../api/kmb/busRouteList");
 
@@ -9,11 +10,17 @@ module.exports.busRouteList = async () => {
   console.log("kmbBusRouteList.length = ", kmbBusRouteList.length);
 
   if (kmbBusRouteList) {
+    const sortedKmbBusRouteList = _.orderBy(
+      kmbBusRouteList,
+      ["route"],
+      ["asc"]
+    );
+
     response = {
       statusCode: 200,
       body: JSON.stringify({
         message: "getBusRouteList",
-        busRouteList: kmbBusRouteList,
+        busRouteList: sortedKmbBusRouteList,
       }),
     };
   } else {
@@ -21,11 +28,17 @@ module.exports.busRouteList = async () => {
     console.log("getBusRouteListKmbResult = ", getBusRouteListKmbResult);
 
     if (getBusRouteListKmbResult) {
+      const sortedKmbBusRouteList = _.orderBy(
+        getBusRouteListKmbResult.data,
+        ["route"],
+        ["asc"]
+      );
+
       response = {
         statusCode: 200,
         body: JSON.stringify({
           message: "getBusRouteList",
-          busRouteList: getBusRouteListKmbResult.data,
+          busRouteList: sortedKmbBusRouteList,
         }),
       };
     }
