@@ -12,7 +12,7 @@ const { getBusRouteList } = require("../../../api/nwfbOrCtb/busRouteList");
 
 const NwfbOrCtbBusRoute = require("../../../model/nwfbOrCtbBusRoute");
 
-module.exports.busRouteListScheduleJob = async () => {
+module.exports.busRouteListCronJob = async () => {
   let response = {};
 
   const nwfbOrCtbBusRoute = await NwfbOrCtbBusRoute.scan().all().exec();
