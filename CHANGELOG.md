@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.7...v0.1.8) (2022-04-19)
+
+
+### Bug Fixes
+
+* 🐛 remove lambdaHashingVersion ([ccb19e3](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/ccb19e306a84175de19316962ac8218fdb1e1489))
+* 🐛 rename service name ([b06c766](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/b06c766fd3f60081925ff39a1f8b868211e7995a))
+* 🐛 rename to shorter name ([fdd56fb](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/fdd56fb225a5fbd35b81960eb2adc5e635f17fcb))
+
 ### [0.1.7](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.6...v0.1.7) (2022-04-19)
 
 
