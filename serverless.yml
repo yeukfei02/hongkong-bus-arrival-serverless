@@ -34,11 +34,11 @@ functions:
           method: get
           cors: true
 
-  nwfbOrCtbBusRouteListScheduleJob:
-    handler: src/nwfbOrCtb/busRouteListScheduleJob/handler.busRouteListScheduleJob
+  nwfbOrCtbBusRouteListCronJob:
+    handler: src/nwfbOrCtb/busRouteListCronJob/handler.busRouteListCronJob
     events:
       # - http:
-      #     path: /bus-route-list-schedule-job
+      #     path: /bus-route-list-cron-job
       #     method: get
       #     cors: true
       - schedule: cron(0 1 1 * ? *)
