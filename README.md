@@ -12,7 +12,7 @@ Hong Kong Bus Arrival Api
 
 documentation: <https://documenter.getpostman.com/view/3827865/UUxtEAPV>
 
-api url: <https://mnasat17b2.execute-api.ap-southeast-1.amazonaws.com/prod>
+api url: <https://aqpt2d6lud.execute-api.ap-southeast-1.amazonaws.com/prod>
 
 ## Requirement
 
