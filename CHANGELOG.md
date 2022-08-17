@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.9](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.8...v0.1.9) (2022-08-17)
+
+
+### Features
+
+* 🎸 add helper func and fix deploy.yml ([9e19bc5](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/9e19bc5dc21a1d716078f6c882992c35a2d39fef))
+* 🎸 use node 16 ([3453040](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/345304070d5ffbcb1630c1ddf449daaa29dbb666))
+
+
+### Bug Fixes
+
+* 🐛 update sls version ([d2d8b39](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/d2d8b39b1429b8595342d6d1f9522877394c7e6b))
+
 ### [0.1.8](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.7...v0.1.8) (2022-04-19)
 
 
