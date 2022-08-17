@@ -1,6 +1,7 @@
 const fetch = require("node-fetch");
+const { getNwfbOrCtbRootUrl } = require("../../helper/helper");
 
-const rootUrl = "https://rt.data.gov.hk";
+const rootUrl = getNwfbOrCtbRootUrl();
 
 async function getBusStopById(busStopId) {
   let result = null;

@@ -1,7 +1,8 @@
 const fetch = require("node-fetch");
 const _ = require("lodash");
+const { getKmbRootUrl } = require("../../helper/helper");
 
-const rootUrl = "https://data.etabus.gov.hk";
+const rootUrl = getKmbRootUrl();
 
 module.exports.getBusStopEstimateTimeArrivalKmb = async (busStopId) => {
   let result = null;
