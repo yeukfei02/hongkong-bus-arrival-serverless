@@ -17,7 +17,10 @@ module.exports.busRouteListScheduleJob = async () => {
 
   const nwfbOrCtbBusRoute = await NwfbOrCtbBusRoute.scan().all().exec();
   const nwfbOrCtbBusRouteList = nwfbOrCtbBusRoute.toJSON();
-  console.log("nwfbOrCtbBusRouteList.length = ", nwfbOrCtbBusRouteList.length);
+  console.log(
+    "db nwfbOrCtbBusRouteList.length = ",
+    nwfbOrCtbBusRouteList.length
+  );
 
   for (let a = 0; a < nwfbOrCtbBusRouteList.length; a++) {
     const item = nwfbOrCtbBusRouteList[a];
@@ -30,12 +33,10 @@ module.exports.busRouteListScheduleJob = async () => {
     const busRouteStr = busRouteStrList[index];
 
     const getBusRouteListResult = await getBusRouteList(busRouteStr);
-    console.log("getBusRouteListResult = ", getBusRouteListResult);
-
     if (getBusRouteListResult && getBusRouteListResult.data) {
       const getBusRouteListResultList = getBusRouteListResult.data;
       console.log(
-        "getBusRouteListResultList.length = ",
+        "response getBusRouteListResultList.length = ",
         getBusRouteListResultList.length
       );
 

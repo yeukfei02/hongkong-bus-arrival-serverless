@@ -3,6 +3,9 @@ const {
 } = require("../../../api/nwfbOrCtb/estimateTimeArrival");
 
 module.exports.busArrivalTime = async (event) => {
+  console.log("### busArrivalTime ###");
+  console.log("event.queryStringParameters = ", event.queryStringParameters);
+
   let response = {};
 
   if (event.queryStringParameters) {
@@ -12,10 +15,6 @@ module.exports.busArrivalTime = async (event) => {
         companyId,
         routeStr,
         busStopId
-      );
-      console.log(
-        "getEstimateTimeArrivalResult = ",
-        getEstimateTimeArrivalResult
       );
 
       let busArrivalTimeObj = {};
@@ -40,6 +39,8 @@ module.exports.busArrivalTime = async (event) => {
       };
     }
   }
+
+  console.log("response = ", response);
 
   return response;
 };

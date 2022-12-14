@@ -3,6 +3,9 @@ const {
 } = require("../../../api/kmb/estimateTimeArrival");
 
 module.exports.busArrivalTime = async (event) => {
+  console.log("### busArrivalTime ###");
+  console.log("event.queryStringParameters = ", event.queryStringParameters);
+
   let response = {};
 
   if (event.queryStringParameters) {
@@ -11,10 +14,6 @@ module.exports.busArrivalTime = async (event) => {
       const getEstimateTimeArrivalKmbResult = await getEstimateTimeArrivalKmb(
         route,
         busStopId
-      );
-      console.log(
-        "getEstimateTimeArrivalKmbResult = ",
-        getEstimateTimeArrivalKmbResult
       );
 
       let busArrivalTimeKmbList = [];
@@ -38,6 +37,8 @@ module.exports.busArrivalTime = async (event) => {
       };
     }
   }
+
+  console.log("response = ", response);
 
   return response;
 };

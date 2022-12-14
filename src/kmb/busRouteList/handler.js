@@ -3,11 +3,12 @@ const KmbBusRoute = require("../../../model/kmbBusRoute");
 const { getBusRouteListKmb } = require("../../../api/kmb/busRouteList");
 
 module.exports.busRouteList = async () => {
+  console.log("### busRouteList ###");
+
   let response = {};
 
   const kmbBusRoute = await KmbBusRoute.scan().all().exec();
   const kmbBusRouteList = kmbBusRoute.toJSON();
-  console.log("kmbBusRouteList.length = ", kmbBusRouteList.length);
 
   if (kmbBusRouteList) {
     const sortedKmbBusRouteList = _.orderBy(
@@ -25,7 +26,6 @@ module.exports.busRouteList = async () => {
     };
   } else {
     const getBusRouteListKmbResult = await getBusRouteListKmb();
-    console.log("getBusRouteListKmbResult = ", getBusRouteListKmbResult);
 
     if (getBusRouteListKmbResult) {
       const sortedKmbBusRouteList = _.orderBy(
@@ -43,6 +43,8 @@ module.exports.busRouteList = async () => {
       };
     }
   }
+
+  console.log("response = ", response);
 
   return response;
 };

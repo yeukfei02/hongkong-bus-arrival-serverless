@@ -1,13 +1,15 @@
 const { getBusRouteKmb } = require("../../../api/kmb/routeKmb");
 
 module.exports.busRoute = async (event) => {
+  console.log("### busRoute ###");
+  console.log("event.queryStringParameters = ", event.queryStringParameters);
+
   let response = {};
 
   if (event.queryStringParameters) {
     const { route, direction } = event.queryStringParameters;
     if (route && direction) {
       const getBusRouteKmbResult = await getBusRouteKmb(route, direction);
-      console.log("getBusRouteKmbResult = ", getBusRouteKmbResult);
 
       let busRouteKmbObj = {};
       if (getBusRouteKmbResult) {
@@ -30,6 +32,8 @@ module.exports.busRoute = async (event) => {
       };
     }
   }
+
+  console.log("response = ", response);
 
   return response;
 };

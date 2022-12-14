@@ -2,11 +2,12 @@ const KmbBusStop = require("../../../model/kmbBusStop");
 const { getBusStopListKmb } = require("../../../api/kmb/busStopList");
 
 module.exports.busStopList = async () => {
+  console.log("### busStopList ###");
+
   let response = {};
 
   const kmbBusStop = await KmbBusStop.scan().all().exec();
   const kmbBusStopList = kmbBusStop.toJSON();
-  console.log("kmbBusStopList.length = ", kmbBusStopList.length);
 
   if (kmbBusStopList) {
     response = {
@@ -18,7 +19,6 @@ module.exports.busStopList = async () => {
     };
   } else {
     const getBusStopListKmbResult = await getBusStopListKmb();
-    console.log("getBusStopListKmbResult = ", getBusStopListKmbResult);
 
     if (getBusStopListKmbResult) {
       response = {
@@ -30,6 +30,8 @@ module.exports.busStopList = async () => {
       };
     }
   }
+
+  console.log("response = ", response);
 
   return response;
 };

@@ -16,18 +16,16 @@ module.exports.busStopListScheduleJob = async () => {
   let response = {};
 
   const getBusStopListKmbResult = await getBusStopListKmb();
-  console.log("getBusStopListKmbResult = ", getBusStopListKmbResult);
-
   if (getBusStopListKmbResult && getBusStopListKmbResult.data) {
     const getBusStopListKmbResultList = getBusStopListKmbResult.data;
     console.log(
-      "getBusStopListKmbResultList.length = ",
+      "response getBusStopListKmbResultList.length = ",
       getBusStopListKmbResultList.length
     );
 
     const kmbBusStop = await KmbBusStop.scan().all().exec();
     const kmbBusStopList = kmbBusStop.toJSON();
-    console.log("kmbBusStopList.length = ", kmbBusStopList.length);
+    console.log("db kmbBusStopList.length = ", kmbBusStopList.length);
 
     if (getBusStopListKmbResultList.length !== kmbBusStopList.length) {
       for (let index = 0; index < kmbBusStopList.length; index++) {

@@ -1,6 +1,9 @@
 const { getBusRouteStopKmb } = require("../../../api/kmb/busRouteStop");
 
 module.exports.busRouteStop = async (event) => {
+  console.log("### busRouteStop ###");
+  console.log("event.queryStringParameters = ", event.queryStringParameters);
+
   let response = {};
 
   if (event.queryStringParameters) {
@@ -10,7 +13,6 @@ module.exports.busRouteStop = async (event) => {
         route,
         direction
       );
-      console.log("getBusRouteStopKmbResult = ", getBusRouteStopKmbResult);
 
       let busRouteStopKmbList = [];
       if (getBusRouteStopKmbResult) {
@@ -33,6 +35,8 @@ module.exports.busRouteStop = async (event) => {
       };
     }
   }
+
+  console.log("response = ", response);
 
   return response;
 };

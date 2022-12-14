@@ -1,13 +1,15 @@
 const { getCompany } = require("../../../api/nwfbOrCtb/company");
 
 module.exports.company = async (event) => {
+  console.log("### company ###");
+  console.log("event.queryStringParameters = ", event.queryStringParameters);
+
   let response = {};
 
   if (event.queryStringParameters) {
     const { companyId } = event.queryStringParameters;
     if (companyId) {
       const getCompanyResult = await getCompany(companyId);
-      console.log("getCompanyResult = ", getCompanyResult);
 
       let companyObj = {};
       if (getCompanyResult) {
@@ -30,6 +32,8 @@ module.exports.company = async (event) => {
       };
     }
   }
+
+  console.log("response = ", response);
 
   return response;
 };
