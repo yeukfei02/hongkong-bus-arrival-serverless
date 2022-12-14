@@ -1,13 +1,15 @@
 const { getBusStop } = require("../../../api/nwfbOrCtb/busStop");
 
 module.exports.busStop = async (event) => {
+  console.log("### busStop ###");
+  console.log("event.pathParameters = ", event.pathParameters);
+
   let response = {};
 
   if (event.pathParameters) {
     const { busStopId } = event.pathParameters;
     if (busStopId) {
       const getBusStopResult = await getBusStop(busStopId);
-      console.log("getBusStopResult = ", getBusStopResult);
 
       let busStopObj = {};
       if (getBusStopResult) {
@@ -30,6 +32,8 @@ module.exports.busStop = async (event) => {
       };
     }
   }
+
+  console.log("response = ", response);
 
   return response;
 };

@@ -1,6 +1,9 @@
 const { getBusRoute } = require("../../../api/nwfbOrCtb/route");
 
 module.exports.busRoute = async (event) => {
+  console.log("### busRoute ###");
+  console.log("event.queryStringParameters = ", event.queryStringParameters);
+
   let response = {};
 
   if (event.queryStringParameters) {
@@ -8,7 +11,6 @@ module.exports.busRoute = async (event) => {
 
     if (companyId && routeStr) {
       const getBusRouteResult = await getBusRoute(companyId, routeStr);
-      console.log("getBusRouteResult = ", getBusRouteResult);
 
       let busRouteObj = {};
       if (getBusRouteResult) {
@@ -31,6 +33,8 @@ module.exports.busRoute = async (event) => {
       };
     }
   }
+
+  console.log("response = ", response);
 
   return response;
 };
