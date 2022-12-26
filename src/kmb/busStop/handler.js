@@ -20,7 +20,7 @@ module.exports.busStop = async (event) => {
         statusCode: 200,
         body: JSON.stringify({
           message: "getBusStop",
-          busStop: busStopObj,
+          busStopKmb: busStopObj,
         }),
       };
     } else {
