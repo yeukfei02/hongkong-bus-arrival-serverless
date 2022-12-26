@@ -3,8 +3,25 @@ const { getKmbRootUrl } = require("../../helper/helper");
 
 const rootUrl = getKmbRootUrl();
 
-module.exports.getBusRouteStopKmb = async (route, direction) => {
+async function getBusStopById(busStopId) {
   let result = null;
+
+  try {
+    const response = await fetch(
+      `${rootUrl}/v1/transport/kmb/stop/${busStopId}`
+    );
+    if (response) {
+      result = await response.json();
+    }
+  } catch (e) {
+    console.log("error = ", e);
+  }
+
+  return result;
+}
+
+module.exports.getBusRouteStopKmb = async (route, direction) => {
+  let results = null;
 
   try {
     const response = await fetch(
@@ -12,11 +29,23 @@ module.exports.getBusRouteStopKmb = async (route, direction) => {
     );
     if (response) {
       const responseJson = await response.json();
-      result = responseJson.data;
+      results = responseJson.data;
     }
   } catch (e) {
     console.log("error = ", e);
   }
 
-  return result;
+  const busRouteStops = [];
+  if (results) {
+    for (let index = 0; index < results.length; index++) {
+      const item = results[index];
+      const busStopId = item.stop;
+      const busStopDetails = await getBusStopById(busStopId);
+
+      const newItem = Object.assign(item, { stop: busStopDetails.data });
+      busRouteStops.push(newItem);
+    }
+  }
+
+  return busRouteStops;
 };
