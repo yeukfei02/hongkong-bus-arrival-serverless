@@ -3,16 +3,15 @@ const { getKmbRootUrl } = require("../../helper/helper");
 
 const rootUrl = getKmbRootUrl();
 
-module.exports.getBusRouteStopKmb = async (route, direction) => {
+module.exports.getBusStop = async (busStopId) => {
   let result = null;
 
   try {
     const response = await fetch(
-      `${rootUrl}/v1/transport/kmb/route-stop/${route}/${direction}/1`
+      `${rootUrl}/v1/transport/kmb/stop/${busStopId}`
     );
     if (response) {
-      const responseJson = await response.json();
-      result = responseJson.data;
+      result = await response.json();
     }
   } catch (e) {
     console.log("error = ", e);
