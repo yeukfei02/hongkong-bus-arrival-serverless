@@ -73,8 +73,7 @@ module.exports.busStopListScheduleJob = async () => {
                 .using("nameEnIndex")
                 .all()
                 .exec();
-              const nwfbOrCtbBusStopObjFromDb =
-                nwfbOrCtbBusStopFromDb.toJSON();
+              const nwfbOrCtbBusStopObjFromDb = nwfbOrCtbBusStopFromDb.toJSON();
 
               if (_.isEmpty(nwfbOrCtbBusStopObjFromDb)) {
                 const nameEn = stop.name_en;
