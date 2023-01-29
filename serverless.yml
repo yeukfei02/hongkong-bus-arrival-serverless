@@ -42,7 +42,18 @@ functions:
       #     cors: true
       - schedule: cron(0 1 1 * ? *)
     timeout: 900
-    memorySize: 3000
+    memorySize: 10000
+
+  nwfbOrCtbBusStopListScheduleJob:
+    handler: src/nwfbOrCtb/busStopListScheduleJob/handler.busStopListScheduleJob
+    events:
+      # - http:
+      #     path: /bus-stop-list-schedule-job
+      #     method: get
+      #     cors: true
+      - schedule: cron(0 2 1 * ? *)
+    timeout: 900
+    memorySize: 10000
 
   nwfbOrCtbBusRouteList:
     handler: src/nwfbOrCtb/busRouteList/handler.busRouteList
@@ -93,7 +104,7 @@ functions:
       #     cors: true
       - schedule: cron(0 1 1 * ? *)
     timeout: 900
-    memorySize: 3000
+    memorySize: 10000
 
   kmbBusStopListScheduleJob:
     handler: src/kmb/busStopListScheduleJob/handler.busStopListScheduleJob
@@ -104,7 +115,7 @@ functions:
       #     cors: true
       - schedule: cron(0 1 1 * ? *)
     timeout: 900
-    memorySize: 3000
+    memorySize: 10000
 
   kmbBusRouteList:
     handler: src/kmb/busRouteList/handler.busRouteList
