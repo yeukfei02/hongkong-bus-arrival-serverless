@@ -63,6 +63,14 @@ functions:
           method: get
           cors: true
 
+  nwfbOrCtbBusStopList:
+    handler: src/nwfbOrCtb/busStopList/handler.busStopList
+    events:
+      - http:
+          path: /bus-stop-list
+          method: get
+          cors: true
+
   nwfbOrCtbBusRoute:
     handler: src/nwfbOrCtb/busRoute/handler.busRoute
     events:
