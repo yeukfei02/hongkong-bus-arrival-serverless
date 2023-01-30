@@ -67,31 +67,34 @@ module.exports.busStopListScheduleJob = async () => {
 
               const { stop } = busRouteStop;
 
-              const nwfbOrCtbBusStopFromDb = await NwfbOrCtbBusStop.query({
-                name_en: { eq: stop.name_en },
-              })
-                .using("nameEnIndex")
-                .all()
-                .exec();
-              const nwfbOrCtbBusStopObjFromDb = nwfbOrCtbBusStopFromDb.toJSON();
+              if (stop.name_en) {
+                const nwfbOrCtbBusStopFromDb = await NwfbOrCtbBusStop.query({
+                  name_en: { eq: stop.name_en },
+                })
+                  .using("nameEnIndex")
+                  .all()
+                  .exec();
+                const nwfbOrCtbBusStopObjFromDb =
+                  nwfbOrCtbBusStopFromDb.toJSON();
 
-              if (_.isEmpty(nwfbOrCtbBusStopObjFromDb)) {
-                const nameEn = stop.name_en;
-                const nameTc = stop.name_tc;
-                const nameSc = stop.name_sc;
-                const lat = stop.lat ? parseFloat(stop.lat) : 0;
-                const long = stop.long ? parseFloat(stop.long) : 0;
+                if (_.isEmpty(nwfbOrCtbBusStopObjFromDb)) {
+                  const nameEn = stop.name_en;
+                  const nameTc = stop.name_tc;
+                  const nameSc = stop.name_sc;
+                  const lat = stop.lat ? parseFloat(stop.lat) : 0;
+                  const long = stop.long ? parseFloat(stop.long) : 0;
 
-                const nwfbOrCtbBusStopObj = new NwfbOrCtbBusStop({
-                  id: nanoid(),
-                  stop: stop.stop,
-                  name_en: nameEn,
-                  name_tc: nameTc,
-                  name_sc: nameSc,
-                  lat,
-                  long,
-                });
-                await nwfbOrCtbBusStopObj.save();
+                  const nwfbOrCtbBusStopObj = new NwfbOrCtbBusStop({
+                    id: nanoid(),
+                    stop: stop.stop,
+                    name_en: nameEn,
+                    name_tc: nameTc,
+                    name_sc: nameSc,
+                    lat,
+                    long,
+                  });
+                  await nwfbOrCtbBusStopObj.save();
+                }
               }
             }
           }
