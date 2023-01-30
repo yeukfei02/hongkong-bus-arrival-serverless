@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.10](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.9...v0.1.10) (2023-01-30)
+
+
+### Features
+
+* 🎸 add commitlint lib ([7214c00](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/7214c00f5b306446334cea88ba89765d4b484b58))
+* 🎸 add kwbBusStop api and remove loop ([ee713eb](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/ee713eba12cf49211510f92be532d62d5a29b1e3))
+* 🎸 add nwfbOrCtbBusStopList api ([d71ca42](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/d71ca4273a2914ff4d3b7c77484091b53ba03d83))
+* 🎸 add nwfbOrCtbBusStopListScheduleJob, update memorysize ([3cd6d57](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/3cd6d57da771b4187e5f43e8044dec72b7793b18))
+
+
+### Bug Fixes
+
+* 🐛 add console.log and rename var ([0533873](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/053387330a51f07c23603ee3b2a07de7b844402d))
+* 🐛 disable nwfbOrCtbBusStopListScheduleJob ([c18c9cd](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/c18c9cd54f34bc5c2cbb3ef371c2cb9758c2eecf))
+* 🐛 fix busRouteStop api ([8113a24](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/8113a24421b943bf28d2ed63a2d0e6a9cbc6ed35))
+* 🐛 fix lint ([4544130](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/4544130bd6a5cc6fdd5ce49b0421808e25ceb9f6))
+* 🐛 fix lint ([5f589b3](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/5f589b3bab5c6c25bb8657511f21312d841c7035))
+* 🐛 fix response ([39ec8a9](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/39ec8a9d9e1289174b4ad67114a03fa410c43364))
+* 🐛 rename handler func name ([a3e4956](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/a3e4956e3fad6abd3b84ad120e342ea78bc6fdd1))
+
 ### [0.1.9](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.8...v0.1.9) (2022-08-17)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "hongkong-bus-arrival-serverless",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "main": "app.js",
   "repository": "https://github.com/yeukfei02/hongkong-bus-arrival-serverless.git",
   "author": "Donald Wu <yeukfei02@gmail.com>",
