@@ -44,16 +44,16 @@ functions:
     timeout: 900
     memorySize: 10000
 
-  nwfbOrCtbBusStopListScheduleJob:
-    handler: src/nwfbOrCtb/busStopListScheduleJob/handler.busStopListScheduleJob
-    events:
-      # - http:
-      #     path: /bus-stop-list-schedule-job
-      #     method: get
-      #     cors: true
-      - schedule: cron(0 2 1 * ? *)
-    timeout: 900
-    memorySize: 10000
+  # nwfbOrCtbBusStopListScheduleJob:
+  #   handler: src/nwfbOrCtb/busStopListScheduleJob/handler.busStopListScheduleJob
+  #   events:
+  #     # - http:
+  #     #     path: /bus-stop-list-schedule-job
+  #     #     method: get
+  #     #     cors: true
+  #     - schedule: cron(0 2 1 * ? *)
+  #   timeout: 900
+  #   memorySize: 10000
 
   nwfbOrCtbBusRouteList:
     handler: src/nwfbOrCtb/busRouteList/handler.busRouteList
