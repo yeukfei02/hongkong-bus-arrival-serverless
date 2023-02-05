@@ -40,34 +40,32 @@ module.exports.busRouteListScheduleJob = async () => {
         getBusRouteListResultList.length
       );
 
-      if (getBusRouteListResultList.length !== nwfbOrCtbBusRouteList.length) {
-        for (let b = 0; b < getBusRouteListResultList.length; b++) {
-          const item = getBusRouteListResultList[b];
+      for (let b = 0; b < getBusRouteListResultList.length; b++) {
+        const item = getBusRouteListResultList[b];
 
-          const { co } = item;
-          const { route } = item;
-          const origEn = item.orig_en;
-          const origTc = item.orig_tc;
-          const origSc = item.orig_sc;
-          const destEn = item.dest_en;
-          const destTc = item.dest_tc;
-          const destSc = item.dest_sc;
-          const dateTimestamp = item.date_timestamp;
+        const { co } = item;
+        const { route } = item;
+        const origEn = item.orig_en;
+        const origTc = item.orig_tc;
+        const origSc = item.orig_sc;
+        const destEn = item.dest_en;
+        const destTc = item.dest_tc;
+        const destSc = item.dest_sc;
+        const dateTimestamp = item.date_timestamp;
 
-          const nwfbOrCtbBusRouteObj = new NwfbOrCtbBusRoute({
-            id: nanoid(),
-            co,
-            route,
-            orig_en: origEn,
-            orig_tc: origTc,
-            orig_sc: origSc,
-            dest_en: destEn,
-            dest_tc: destTc,
-            dest_sc: destSc,
-            date_timestamp: dateTimestamp,
-          });
-          await nwfbOrCtbBusRouteObj.save();
-        }
+        const nwfbOrCtbBusRouteObj = new NwfbOrCtbBusRoute({
+          id: nanoid(),
+          co,
+          route,
+          orig_en: origEn,
+          orig_tc: origTc,
+          orig_sc: origSc,
+          dest_en: destEn,
+          dest_tc: destTc,
+          dest_sc: destSc,
+          date_timestamp: dateTimestamp,
+        });
+        await nwfbOrCtbBusRouteObj.save();
       }
     }
   }
