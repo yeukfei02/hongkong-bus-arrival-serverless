@@ -23,6 +23,7 @@ provider:
     description: hk bus arrival serverless prod
   architecture: arm64
   timeout: 30
+  memorySize: 2000
 
 functions:
   nwfbOrCtbCompany:
