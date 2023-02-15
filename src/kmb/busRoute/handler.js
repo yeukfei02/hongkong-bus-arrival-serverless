@@ -27,7 +27,7 @@ module.exports.busRoute = async (event) => {
       response = {
         statusCode: 400,
         body: JSON.stringify({
-          message: "getBusRouteKmb error, no route, direction",
+          message: "getBusRouteKmb error, no route and direction",
         }),
       };
     }
