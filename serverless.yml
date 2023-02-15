@@ -104,6 +104,14 @@ functions:
           method: get
           cors: true
 
+  nwfbOrCtbBusStopArrivalTime:
+    handler: src/nwfbOrCtb/busStopArrivalTime/handler.busStopArrivalTime
+    events:
+      - http:
+          path: /bus-stop-arrival-time
+          method: get
+          cors: true
+
   kmbBusRouteListScheduleJob:
     handler: src/kmb/busRouteListScheduleJob/handler.busRouteListScheduleJob
     events:
