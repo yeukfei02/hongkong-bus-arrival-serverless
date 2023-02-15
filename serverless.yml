@@ -104,6 +104,14 @@ functions:
           method: get
           cors: true
 
+  nwfbOrCtbBusStopArrivalTime:
+    handler: src/nwfbOrCtb/busStopArrivalTime/handler.busStopArrivalTime
+    events:
+      - http:
+          path: /bus-stop-arrival-time
+          method: get
+          cors: true
+
   kmbBusRouteListScheduleJob:
     handler: src/kmb/busRouteListScheduleJob/handler.busRouteListScheduleJob
     events:
@@ -122,7 +130,7 @@ functions:
       #     path: /kmb/bus-stop-list-schedule-job
       #     method: get
       #     cors: true
-      - schedule: cron(0 1 1 * ? *)
+      - schedule: cron(0 2 1 * ? *)
     timeout: 900
     memorySize: 10000
 
@@ -187,6 +195,52 @@ functions:
     events:
       - http:
           path: /kmb/bus-route-arrival-time
+          method: get
+          cors: true
+
+  nlbBusRouteListScheduleJob:
+    handler: src/nlb/busRouteListScheduleJob/handler.busRouteListScheduleJob
+    events:
+      # - http:
+      #     path: /nlb/bus-route-list-schedule-job
+      #     method: get
+      #     cors: true
+      - schedule: cron(0 1 1 * ? *)
+    timeout: 900
+    memorySize: 10000
+
+  nlbBusStopListScheduleJob:
+    handler: src/nlb/busStopListScheduleJob/handler.busStopListScheduleJob
+    events:
+      # - http:
+      #     path: /nlb/bus-stop-list-schedule-job
+      #     method: get
+      #     cors: true
+      - schedule: cron(0 2 1 * ? *)
+    timeout: 900
+    memorySize: 10000
+
+  nlbBusRouteList:
+    handler: src/nlb/busRouteList/handler.busRouteList
+    events:
+      - http:
+          path: /nlb/bus-route-list
+          method: get
+          cors: true
+
+  nlbBusStopList:
+    handler: src/nlb/busStopList/handler.busStopList
+    events:
+      - http:
+          path: /nlb/bus-stop-list
+          method: get
+          cors: true
+
+  nlbBusArrivalTime:
+    handler: src/nlb/busArrivalTime/handler.busArrivalTime
+    events:
+      - http:
+          path: /nlb/bus-arrival-time
           method: get
           cors: true
 

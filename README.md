@@ -10,6 +10,8 @@ Hong Kong Bus Arrival Api
 
 - Long Win Bus Company Limited (LWB)
 
+- New Lantao Bus Company (1973) Limited
+
 documentation: <https://documenter.getpostman.com/view/3827865/UUxtEAPV>
 
 api url: <https://aqpt2d6lud.execute-api.ap-southeast-1.amazonaws.com/prod>
