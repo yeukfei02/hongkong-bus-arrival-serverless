@@ -30,7 +30,7 @@ module.exports.busArrivalTime = async (event) => {
       response = {
         statusCode: 400,
         body: JSON.stringify({
-          message: "busArrivalTimeNlb error, no route",
+          message: "busArrivalTimeNlb error, no routeId and stopId",
         }),
       };
     }
