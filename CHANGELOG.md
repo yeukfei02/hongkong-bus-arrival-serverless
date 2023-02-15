@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.11](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.10...v0.1.11) (2023-02-15)
+
+
+### Features
+
+* 🎸 add nlb bus api and cron job ([a20f5cc](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/a20f5cc7828f9ba4d344c49ebbe3392aa6eaa8e1))
+* 🎸 add nwfbOrCtb bus stop arrival time api ([965d817](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/965d8176f18220ed67e7e1664c804f732c72d25b))
+* 🎸 increase memorySize to 2gb ([71fece4](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/71fece43befc2e5d0549b76649fa02c00ce6951e))
+
+
+### Bug Fixes
+
+* 🐛 fix nwfbOrCtbBusRouteListScheduleJob ([73a59b8](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/73a59b84217355146e8d2a6848b53c81b6116f1f))
+
 ### [0.1.10](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.9...v0.1.10) (2023-01-30)
 
 
