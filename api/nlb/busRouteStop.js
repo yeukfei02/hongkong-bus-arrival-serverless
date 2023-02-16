@@ -3,27 +3,21 @@ const { getNlbRootUrl } = require("../../helper/helper");
 
 const rootUrl = getNlbRootUrl();
 
-module.exports.getBusArrivalTimeNlb = async (
-  busRouteId,
-  busStopId,
-  language
-) => {
-  let busArrivalTime = null;
+module.exports.getBusRouteStopByBusRouteIdNlb = async (busRouteId) => {
+  let busRouteStop = null;
 
   try {
     const queryParams = new URLSearchParams({
-      action: "estimatedArrivals",
+      action: "list",
       routeId: busRouteId,
-      stopId: busStopId,
-      language: language || "zh",
     });
     const response = await fetch(`${rootUrl}/stop.php?${queryParams}`);
     if (response) {
-      busArrivalTime = await response.json();
+      busRouteStop = await response.json();
     }
   } catch (e) {
     console.log("error = ", e);
   }
 
-  return busArrivalTime;
+  return busRouteStop;
 };

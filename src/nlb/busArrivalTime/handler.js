@@ -7,22 +7,23 @@ module.exports.busArrivalTime = async (event) => {
   let response = {};
 
   if (event.queryStringParameters) {
-    const { routeId, stopId } = event.queryStringParameters;
-    if (routeId && stopId) {
-      const getBusArrivalTimeNlbResult = await getBusArrivalTimeNlb(
-        routeId,
-        stopId
+    const { busRouteId, busStopId, language } = event.queryStringParameters;
+    if (busRouteId && busStopId && language) {
+      const getBusArrivalTimeResult = await getBusArrivalTimeNlb(
+        busRouteId,
+        busStopId,
+        language
       );
 
       let busArrivalTimeNlb = [];
-      if (getBusArrivalTimeNlbResult) {
-        busArrivalTimeNlb = getBusArrivalTimeNlbResult.estimatedArrivals;
+      if (getBusArrivalTimeResult) {
+        busArrivalTimeNlb = getBusArrivalTimeResult.estimatedArrivals;
       }
 
       response = {
         statusCode: 200,
         body: JSON.stringify({
-          message: "busArrivalTimeNlb",
+          message: "getBusArrivalTime",
           busArrivalTimeNlb,
         }),
       };
@@ -30,7 +31,8 @@ module.exports.busArrivalTime = async (event) => {
       response = {
         statusCode: 400,
         body: JSON.stringify({
-          message: "busArrivalTimeNlb error, no routeId and stopId",
+          message:
+            "getBusArrivalTime error, no busRouteId and busStopId and language",
         }),
       };
     }

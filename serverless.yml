@@ -236,11 +236,27 @@ functions:
           method: get
           cors: true
 
+  nlbBusRouteStop:
+    handler: src/nlb/busRouteStop/handler.busRouteStop
+    events:
+      - http:
+          path: /nlb/bus-route-stop
+          method: get
+          cors: true
+
   nlbBusArrivalTime:
     handler: src/nlb/busArrivalTime/handler.busArrivalTime
     events:
       - http:
           path: /nlb/bus-arrival-time
+          method: get
+          cors: true
+
+  nlbBusStopArrivalTime:
+    handler: src/nlb/busStopArrivalTime/handler.busStopArrivalTime
+    events:
+      - http:
+          path: /nlb/bus-stop-arrival-time
           method: get
           cors: true
 
