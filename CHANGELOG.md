@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.12](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.11...v0.1.12) (2023-02-16)
+
+
+### Features
+
+* 🎸 add nlb bus related api ([1682e88](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/1682e88d62ee117c33f4b9bd073411374b75c153))
+
+
+### Bug Fixes
+
+* 🐛 fix error message ([71d94ae](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/commit/71d94aecc912f4eb0e92ffc0e370086d7f58dbf2))
+
 ### [0.1.11](https://github.com/yeukfei02/hongkong-bus-arrival-serverless/compare/v0.1.10...v0.1.11) (2023-02-15)
 
 
