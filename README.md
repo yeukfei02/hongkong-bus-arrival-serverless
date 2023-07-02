@@ -1,6 +1,6 @@
 # hongkong-bus-arrival-serverless
 
-Hong Kong Bus Arrival Api
+Hong Kong Bus Arrival Api (香港巴士到站時間Api)
 
 - New World First Bus Services Limited
 
