@@ -21,7 +21,7 @@ async function getBusStopById(busStopId) {
 }
 
 module.exports.getBusRouteStop = async (companyId, routeStr, direction) => {
-  let results = null;
+  let results = [];
 
   try {
     const response = await fetch(
@@ -29,7 +29,9 @@ module.exports.getBusRouteStop = async (companyId, routeStr, direction) => {
     );
     if (response) {
       const responseJson = await response.json();
-      results = responseJson.data;
+      if (responseJson) {
+        results = responseJson.data;
+      }
     }
   } catch (e) {
     console.log("error = ", e);
